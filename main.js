@@ -36,7 +36,7 @@ var betterWords = [];
 storyWords.forEach(function (word){
     if (!unnecessaryWords.includes(word)) {
         betterWords.push(word);
-    }
+    };
 });
 
 /*
@@ -81,7 +81,7 @@ variable for each word that has a period or exclamation mark as
 its final character.
 */
 
-let sentences = 0
+let sentences = 0;
 
 storyWords.forEach(function (word){
     if (word.includes('.') || word.includes('!')){

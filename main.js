@@ -126,3 +126,33 @@ number of times.
 
 Replaced overused words with something else.
 */
+
+function getCharacterObj(characterSplit) {
+
+    let characterObj={};
+
+    for (var character of characterSplit) {
+
+        if (characterObj[character]) {
+            characterObj[character] += 1;
+        } else {
+            characterObj[character] = 1;
+        }
+
+    }
+    return characterObj;
+}
+
+function characterCount (targetCharacter) {
+
+    var storyLower = story.toLowerCase();
+
+    var characterSplit = storyLower.split('');
+    
+    let characterObj = getCharacterObj(characterSplit);
+
+    if (Object.hasOwn(characterObj, targetCharacter)){
+        return characterObj[targetCharacter];
+    } 
+    return 0;
+};
